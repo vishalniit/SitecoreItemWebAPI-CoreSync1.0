@@ -1,0 +1,5 @@
+D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\bin\Release\Mindtree.Sitecore.ItemWebApi.Pipelines.dll
+D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\bin\Release\Mindtree.Sitecore.ItemWebApi.Pipelines.pdb
+D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Release\Mindtree.Sitecore.ItemWebAPI.Pipelines.csprojResolveAssemblyReference.cache
+D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Release\Mindtree.Sitecore.ItemWebApi.Pipelines.dll
+D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Release\Mindtree.Sitecore.ItemWebApi.Pipelines.pdb

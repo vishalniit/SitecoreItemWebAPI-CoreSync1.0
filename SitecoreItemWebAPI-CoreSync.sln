@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mindtree.Sitecore.ItemWebApi.Pipelines", "Mindtree.Sitecore.ItemWebAPI.Pipelines\Mindtree.Sitecore.ItemWebApi.Pipelines.csproj", "{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mindtree.Sitecore.WebApi.Client", "Mindtree.Sitecore.WebApiClient\Mindtree.Sitecore.WebApi.Client.csproj", "{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mindtree.Sitecore.WebApi.Client.Demo", "Mindtree.Sitecore.WebApiClient.Demo\Mindtree.Sitecore.WebApi.Client.Demo.csproj", "{2194A861-80C6-4286-A929-A543F8133EA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{776D29E8-E301-400F-B799-4206744B4783}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore-7.2", "Sitecore-7.2", "{087E4FB8-8AEA-44F9-9273-6C05B8238339}"
+	ProjectSection(SolutionItems) = preProject
+		packages\Sitecore-7.2\Sitecore.Client.dll = packages\Sitecore-7.2\Sitecore.Client.dll
+		packages\Sitecore-7.2\Sitecore.ContentSearch.dll = packages\Sitecore-7.2\Sitecore.ContentSearch.dll
+		packages\Sitecore-7.2\Sitecore.ItemWebApi.dll = packages\Sitecore-7.2\Sitecore.ItemWebApi.dll
+		packages\Sitecore-7.2\Sitecore.Kernel.dll = packages\Sitecore-7.2\Sitecore.Kernel.dll
+		packages\Sitecore-7.2\Sitecore.Logging.dll = packages\Sitecore-7.2\Sitecore.Logging.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5DB088FC-3AF9-4E2C-A9AE-3D14F6A4490D}.Release|x86.ActiveCfg = Release|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B22A17B6-819E-4B35-B9CE-E7F835BCBCBC}.Release|x86.ActiveCfg = Release|Any CPU
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Debug|x86.ActiveCfg = Debug|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Debug|x86.Build.0 = Debug|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Release|Any CPU.ActiveCfg = Release|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Release|x86.ActiveCfg = Release|x86
+		{2194A861-80C6-4286-A929-A543F8133EA5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{087E4FB8-8AEA-44F9-9273-6C05B8238339} = {776D29E8-E301-400F-B799-4206744B4783}
+	EndGlobalSection
+EndGlobal

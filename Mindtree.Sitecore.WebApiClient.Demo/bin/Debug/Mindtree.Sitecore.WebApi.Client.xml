@@ -1,0 +1,1939 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mindtree.Sitecore.WebApi.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext">
+            <summary>
+            Represents an authenticated Sitecore data context
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext">
+            <summary>
+            Represents an un-authenticated Sitecore data context
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext">
+            <summary>
+            Defines the properties and methods that objects wishing to send requests to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext.GetResponse``1(Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery)">
+            <summary>
+            Gets the response.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext.Get``1(System.Net.HttpWebRequest,Mindtree.Sitecore.WebApi.Client.ResponseFormat,``0)">
+            <summary>
+            Gets the specified URI.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request">The request.</param>
+            <param name="responseFormat">The response format.</param>
+            <param name="scResponse">The sc response.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext.CreateRequest(System.Uri,Mindtree.Sitecore.WebApi.Client.SitecoreQueryType)">
+            <summary>
+            Creates the request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext.DeserializeJsonResponse``1(System.String)">
+            <summary>
+            Deserializes the Json response.
+            </summary>
+            <param name="response">The response.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext.DeserializeXmlResponse``1(System.String)">
+            <summary>
+            Deserializes the XML response.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="response">The response.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext.GetPublicKey">
+            <summary>
+            Gets the public key.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreDataContext.HostName">
+            <summary>
+            Gets or sets the name of the host.
+            </summary>
+            <value>
+            The name of the host.
+            </value>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext"/> class.
+            </summary>
+            <param name="hostName">Name of the host.</param>
+            <param name="isSecure">if set to <c>true</c> [is secure].</param>
+            <exception cref="T:System.ArgumentException">hostName cannot be null, empty or an un-recognized type</exception>
+            <exception cref="T:System.NotSupportedException">the hostName paramater cannot be null or empty when creating an instance of SitecoreDataContext</exception>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.GetResponse``1(Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery)">
+            <summary>
+            Gets the response.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.Get``1(System.Net.HttpWebRequest,Mindtree.Sitecore.WebApi.Client.ResponseFormat,``0)">
+            <summary>
+            Gets the specified URI.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request">The request.</param>
+            <param name="responseFormat">The response format.</param>
+            <param name="scResponse">The sc response.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">scResponse</exception>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.SetExceptionMetaData(System.Exception,Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseResponse)">
+            <summary>
+            Sets the exception meta data.
+            </summary>
+            <param name="ex">The ex.</param>
+            <param name="scResponse">The sc response.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.CreateRequest(System.Uri,Mindtree.Sitecore.WebApi.Client.SitecoreQueryType)">
+            <summary>
+            Creates the request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.DeserializeJsonResponse``1(System.String)">
+            <summary>
+            Des the serialize response.
+            </summary>
+            <param name="response">The response.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.DeserializeXmlResponse``1(System.String)">
+            <summary>
+            Deserializes the XML response.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="response">The response.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.GetPublicKey">
+            <summary>
+            Gets the public key.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreDataContext.HostName">
+            <summary>
+            Gets or sets the name of the host.
+            </summary>
+            <value>
+            The name of the host.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.IAuthenticatedSitecoreDataContext">
+            <summary>
+            Defines the properties and methods that objects wishing to send authenticated requests to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.IAuthenticatedSitecoreDataContext.CreateRequest(System.Uri,Mindtree.Sitecore.WebApi.Client.SitecoreQueryType,System.Byte[],System.String)">
+            <summary>
+            Creates the request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.IAuthenticatedSitecoreDataContext.ApplyHeaders(System.Net.HttpWebRequest)">
+            <summary>
+            Applies the headers.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.IAuthenticatedSitecoreDataContext.ApplyEncryptedHeaders(System.Net.HttpWebRequest)">
+            <summary>
+            Applies the encrypted headers.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IAuthenticatedSitecoreDataContext.Credentials">
+            <summary>
+            Gets the credentials.
+            </summary>
+            <value>
+            The credentials.
+            </value>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.#ctor(System.String,Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCredentials,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext"/> class.
+            </summary>
+            <param name="hostName">Name of the host.</param>
+            <param name="isSecure">if set to <c>true</c> [is secure].</param>
+            <param name="credentials">The credentials.</param>
+            <exception cref="T:System.ArgumentException">credentials</exception>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.ApplyHeaders(System.Net.HttpWebRequest)">
+            <summary>
+            Applies the headers.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.ApplyEncryptedHeaders(System.Net.HttpWebRequest)">
+            <summary>
+            Applies the encrypted headers.
+            </summary>
+            <param name="request">The request.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.CreateRequest(System.Uri,Mindtree.Sitecore.WebApi.Client.SitecoreQueryType,System.Byte[],System.String)">
+            <summary>
+            Creates the request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.CreateRequest(System.Uri,Mindtree.Sitecore.WebApi.Client.SitecoreQueryType,System.String,System.String)">
+            <summary>
+            Creates the request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.CreateRequest(System.Uri,Mindtree.Sitecore.WebApi.Client.SitecoreQueryType)">
+            <summary>
+            Creates the request.
+            </summary>
+            <param name="uri"></param>
+            <param name="type"></param>
+            <param name="fsMediaItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.GetResponse``1(Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery)">
+            <summary>
+            Gets the response.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">query</exception>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.GetPublicKey">
+            <summary>
+            Gets the public key.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.AuthenticatedSitecoreDataContext.Credentials">
+            <summary>
+            Gets the credentials.
+            </summary>
+            <value>
+            The credentials.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery">
+            <summary>
+            Represents a query that creates new items
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreAdvanceQuery">
+            <summary>
+            Defines the properties and methods that objects wishing to send queries to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery">
+            <summary>
+            Defines the properties and methods that objects wishing to send queries to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.IValidated">
+            <summary>
+            Defines the properties and methods that objects wishing to represent a validated instance must implement
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.IValidated.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IValidated.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery.BuildUri(System.String)">
+            <summary>
+            Builds the URI.
+            </summary>
+            <param name="hostName">Name of the host.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery.ApiVersion">
+            <summary>
+            Gets or sets the API version.
+            </summary>
+            <value>
+            The API version.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery.Database">
+            <summary>
+            Gets or sets the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery.QueryStringParameters">
+            <summary>
+            Gets the query string parameters.
+            </summary>
+            <value>
+            The query string parameters.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery.QueryType">
+            <summary>
+            Gets or sets the type of the query.
+            </summary>
+            <value>
+            The type of the query.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseQuery.ResponseFormat">
+            <summary>
+            Gets the response format.
+            </summary>
+            <value>
+            The response format.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreAdvanceQuery.loadOptions">
+            <summary>
+            Get or sets the loadOption Object
+            Serializer is XML
+            <value>
+            Sitecore.Data.Serialization.LoadOptions object serialized in ItemQuery
+            </value>
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreAdvanceQuery.syncItem">
+            <summary>
+            Get or sets the SyncItem Object
+            Serializer is Custom Sitecore Text
+            <value>
+            Sitecore.Data.Serialization.ObjectModel object serialized in ItemQuery
+            </value>
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreAdvanceQuery.EncryptionKey">
+            <summary>
+            Get or sets the string value to decrypt the passed value
+            Serializer is Custom Sitecore Text
+            <value>
+            string Decryption key
+            </value>
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreAdvanceQuery.MediaItemStream">
+            <summary>
+            Get or sets the media item for 
+            </summary>
+            <value>
+            File stream 
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.loadOptions">
+            <summary>
+            Get or sets the loadOption Object
+            Serializer is XML
+            <value>
+            Sitecore.Data.Serialization.LoadOptions object serialized in ItemQuery
+            </value>
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.EncryptionKey">
+            <summary>
+            Get or sets the string value to decrypt the passed value
+            Serializer is Custom Sitecore Text
+            <value>
+            string Decryption key
+            </value>
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.ApiVersion">
+            <summary>
+            Gets or sets the API version.
+            </summary>
+            <value>
+            The API version.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.Database">
+            <summary>
+            Gets or sets the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.ItemVersion">
+            <summary>
+            Gets or sets the item version.
+            </summary>
+            <value>
+            The item version.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.RetainID">
+            <summary>
+            mandatory to pass the true value
+            as without this WebAPI will not identify
+            it as a advance create request
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.FieldsToReturn">
+            <summary>
+            Gets or sets the fields.
+            </summary>
+            <value>
+            The fields.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.ItemId">
+            <summary>
+            Gets or sets the item id.
+            </summary>
+            <value>
+            The item id.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreAdvanceCreateQuery.syncItem">
+            <summary>
+            Get or sets the SyncItem Object
+            Serializer is Custom Sitecore Text
+            <value>
+            Sitecore.Data.Serialization.ObjectModel object serialized in ItemQuery
+            </value>
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery">
+            <summary>
+            Represents a sitecore query that performs an action
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreActionQuery">
+            <summary>
+            Defines the properties and methods that objects wishing to send action queries to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreActionQuery.ActionName">
+            <summary>
+            Gets or sets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.#ctor(System.String,Mindtree.Sitecore.WebApi.Client.ResponseFormat)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery"/> class.
+            </summary>
+            <param name="actionName">Name of the action.</param>
+            <param name="format">The format.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery"/> class.
+            </summary>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameters">The parameters.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.BuildUri(System.String)">
+            <summary>
+            Builds the URI.
+            </summary>
+            <param name="hostName">Name of the host.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.ApiVersion">
+            <summary>
+            Gets or sets the API version.
+            </summary>
+            <value>
+            The API version.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.Database">
+            <summary>
+            Gets or sets the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.QueryStringParameters">
+            <summary>
+            Gets the query string parameters.
+            </summary>
+            <value>
+            The query string parameters.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.QueryType">
+            <summary>
+            Gets or sets the type of the query.
+            </summary>
+            <value>
+            The type of the query.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.ResponseFormat">
+            <summary>
+            Gets the response format.
+            </summary>
+            <value>
+            The response format.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.ActionName">
+            <summary>
+            Gets or sets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreActionQuery.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery">
+            <summary>
+            Represents a query that creates new items
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery">
+            <summary>
+            Abstract representation of a query to the Sitecore Item Web API
+            </summary>
+            <remarks>
+            <para>
+            All query classes should inherit from SitcoreQuery
+            </para>
+            </remarks>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery">
+            <summary>
+            Defines the properties and methods that objects wishing to send queries to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.Payload">
+            <summary>
+            Gets or sets the payload.
+            </summary>
+            <value>
+            The payload.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.ItemVersion">
+            <summary>
+            Gets or sets the item version.
+            </summary>
+            <value>
+            The item version.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.ExtractBlob">
+            <summary>
+            Gets or sets a value indicating whether [extract BLOB].
+            </summary>
+            <value>
+              <c>true</c> if [extract BLOB]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.QueryScope">
+            <summary>
+            Gets or sets the query scope.
+            </summary>
+            <value>
+            The query scope.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.Page">
+            <summary>
+            Gets or sets the page.
+            </summary>
+            <value>
+            The page.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.PageSize">
+            <summary>
+            Sets the size of the page.
+            </summary>
+            <value>
+            The size of the page.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>
+            The language.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.FieldsToReturn">
+            <summary>
+            Gets or sets the fields to return in the response.
+            </summary>
+            <value>
+            The fields to return.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.MediaItemStream">
+            <summary>
+            Get or sets the media item for 
+            </summary>
+            <value>
+            File stream 
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.FieldsToUpdate">
+            <summary>
+            Gets or sets fields and their values for update or create operations.
+            </summary>
+            <value>
+            The fields to update.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreQuery.QueryParameter">
+            <summary>
+            Gets the query parameter.
+            </summary>
+            <value>
+            The query parameter.
+            </value>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.#ctor(Mindtree.Sitecore.WebApi.Client.SitecoreQueryType,Mindtree.Sitecore.WebApi.Client.ResponseFormat)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery"/> class.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="format">The format.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.BuildUri(System.String)">
+            <summary>
+            Builds the URI.
+            </summary>
+            <param name="hostName">Name of the host.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.QueryType">
+            <summary>
+            Gets or sets the type of the query.
+            </summary>
+            <value>
+            The type of the query.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.ResponseFormat">
+            <summary>
+            Gets the response format.
+            </summary>
+            <value>
+            The response format.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.FieldsToUpdate">
+            <summary>
+            Gets or sets the fields used for create requests.
+            </summary>
+            <value>
+            The fields.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.MediaItemStream">
+            <summary>
+            Get or sets the media item for 
+            </summary>
+            <value>
+            File stream 
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.Payload">
+            <summary>
+            Gets or sets the payload.
+            </summary>
+            <value>
+            The payload.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.ApiVersion">
+            <summary>
+            Gets or sets the API version.
+            </summary>
+            <value>
+            The API version.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.Database">
+            <summary>
+            Gets or sets the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.ItemVersion">
+            <summary>
+            Gets or sets the item version.
+            </summary>
+            <value>
+            The item version.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.ExtractBlob">
+            <summary>
+            Gets or sets a value indicating whether [extract BLOB].
+            </summary>
+            <value>
+              <c>true</c> if [extract BLOB]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.QueryScope">
+            <summary>
+            Gets or sets the query scope.
+            </summary>
+            <value>
+            The query scope.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.Page">
+            <summary>
+            Gets or sets the page.
+            </summary>
+            <value>
+            The page.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.PageSize">
+            <summary>
+            Sets the size of the page.
+            </summary>
+            <value>
+            The size of the page.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>
+            The language.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.FieldsToReturn">
+            <summary>
+            Gets or sets the fields.
+            </summary>
+            <value>
+            The fields.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.QueryParameter">
+            <summary>
+            Gets the query parameter.
+            </summary>
+            <value>
+            The query parameter.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.QueryStringParameters">
+            <summary>
+            Gets the query string parameters.
+            </summary>
+            <value>
+            The query string parameters.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreQuery.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCreateQuery">
+            <summary>
+            Defines the properties and methods that objects wishing to send creation queries to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreItemQuery">
+            <summary>
+            Defines the properties and methods that objects wishing to send item queries to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreItemQuery.ItemId">
+            <summary>
+            Gets or sets the item id.
+            </summary>
+            <value>
+            The item id.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCreateQuery.ParentQuery">
+            <summary>
+            Gets or sets the parent query.
+            </summary>
+            <value>
+            The parent query.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCreateQuery.Name">
+            <summary>
+            Gets or sets the Name of the new item.
+            </summary>
+            <value>
+            The Name.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCreateQuery.Template">
+            <summary>
+            Gets or sets the template id or path for create requests.
+            </summary>
+            <value>
+            The template.		
+            </value>
+            <remarks>
+            <para>Template paths are relative to the /sitecore/Templates folder</para>
+            </remarks>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery"/> class.
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.QueryParameter">
+            <summary>
+            Gets the query string parameter.
+            </summary>
+            <value>
+            The query string parameter.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.ParentQuery">
+            <summary>
+            Gets or sets the parent.
+            </summary>
+            <value>
+            The fields.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.Name">
+            <summary>
+            Gets or sets the Name of the new item.
+            </summary>
+            <value>
+            The Name.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.Template">
+            <summary>
+            Gets or sets the template id or path for create requests.
+            </summary>
+            <value>
+            The template.		
+            </value>
+            <remarks>
+            <para>Template paths are relative to the /sitecore/Templates folder</para>
+            </remarks>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.QueryStringParameters">
+            <summary>
+            Gets the query string parameters.
+            </summary>
+            <value>
+            The query string parameters.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery.ItemId">
+            <summary>
+            Gets or sets the item id.
+            </summary>
+            <value>
+            The item id.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery">
+            <summary>
+            Represents a query that creates new items
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateQuery"/> class.
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery.QueryParameter">
+            <summary>
+            Gets the query string parameter.
+            </summary>
+            <value>
+            The query string parameter.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery.Items">
+            <summary>
+            Gets or sets the items id for which you want to create versions
+            </summary>
+            <value>
+            Pipe separated Item IDs		
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery.QueryStringParameters">
+            <summary>
+            Gets the query string parameters.
+            </summary>
+            <value>
+            The query string parameters.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreCreateVersionQuery.ItemId">
+            <summary>
+            Gets or sets the item id.
+            </summary>
+            <value>
+            The item id.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreExpressionQuery">
+            <summary>
+            Represents a query that utlises Sitecore query
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreExpressionQuery">
+            <summary>
+            Defines the properties and methods that objects wishing to send expression queries to the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreExpressionQuery.Query">
+            <summary>
+            Gets or sets the query.
+            </summary>
+            <value>
+            The query.
+            </value>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreExpressionQuery.#ctor(Mindtree.Sitecore.WebApi.Client.SitecoreQueryType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreExpressionQuery"/> class.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreExpressionQuery.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreExpressionQuery.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreExpressionQuery.QueryParameter">
+            <summary>
+            Gets the query string parameter.
+            </summary>
+            <value>
+            The query string parameter.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreExpressionQuery.Query">
+            <summary>
+            Gets or sets the query.
+            </summary>
+            <value>
+            The query.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreItemQuery">
+            <summary>
+            Represents a query that searches for a single item
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreItemQuery.#ctor(Mindtree.Sitecore.WebApi.Client.SitecoreQueryType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Mindtree.Sitecore.WebApi.Client.Data.SitecoreItemQuery"/> class.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Data.SitecoreItemQuery.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreItemQuery.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreItemQuery.QueryParameter">
+            <summary>
+            Gets the query string parameter.
+            </summary>
+            <value>
+            The query string parameter.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Data.SitecoreItemQuery.ItemId">
+            <summary>
+            Gets or sets the item id.
+            </summary>
+            <value>
+            The item id.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Diagnostics.Log">
+            <summary>
+            Factory class for logging messages
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Diagnostics.Log.WriteInfo(System.String)">
+            <summary>
+            Logs the specified message as information.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Diagnostics.Log.WriteWarn(System.String)">
+            <summary>
+            Logs the specified message as a warning.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Diagnostics.Log.WriteError(System.String,System.Exception)">
+            <summary>
+            Logs the specified message as an error.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Entities.WebApiError">
+            <summary>
+            Represents an error returned by the Sitecore Item Web API
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiError.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Entities.WebApiField">
+            <summary>
+            Represents a field on an item returned by the Sitecore Web Item API
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiField.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiField.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>
+            The type.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiField.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem">
+            <summary>
+            Represents and item returned by the Sitecore Web Item API
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.Fields">
+            <summary>
+            Gets or sets the fields.
+            </summary>
+            <value>
+            The fields.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.Database">
+            <summary>
+            Gets or sets the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>
+            The display name.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.HasChildren">
+            <summary>
+            Gets or sets a value indicating whether this instance has children.
+            </summary>
+            <value>
+            <c>true</c> if this instance has children; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>
+            The language.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.LongId">
+            <summary>
+            Gets or sets the long id.
+            </summary>
+            <value>
+            The long id.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.Template">
+            <summary>
+            Gets or sets the template.
+            </summary>
+            <value>
+            The template.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiItem.Version">
+            <summary>
+            Gets or sets the version.
+            </summary>
+            <value>
+            The version.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Entities.WebApiResult">
+            <summary>
+            Represents a result returned by the Sitecore Item Web API
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiResult.Items">
+            <summary>
+            Gets the items.
+            </summary>
+            <value>
+            The items.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiResult.ResultCount">
+            <summary>
+            Gets the result count.
+            </summary>
+            <value>
+            The result count.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiResult.TotalCount">
+            <summary>
+            Gets the total count.
+            </summary>
+            <value>
+            The total count.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiResult.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+            <value>
+            The count.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Entities.WebApiResult.ItemIds">
+            <summary>
+            Gets or sets the item ids.
+            </summary>
+            <value>
+            The item ids.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.SitecoreQueryType">
+            <summary>
+            Read is currently the only supported operation, more to follow
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreQueryType.Read">
+            <summary>
+            Read only query
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreQueryType.Create">
+            <summary>
+            Creates new items
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreQueryType.Update">
+            <summary>
+            Updates existing items
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreQueryType.Delete">
+            <summary>
+            Deletes existing items
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreQueryType.CreateVersion">
+            <summary>
+            Create the version
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreQueryType.MediaCreate">
+            <summary>
+            Create the media item
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.SitecorePayload">
+            <summary>
+            Sitecore Web Item API payload type
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecorePayload.Min">
+            <summary>
+            No fields are returned in the service response
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecorePayload.Content">
+            <summary>
+            Only content fields are returned in the service response
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecorePayload.Full">
+            <summary>
+            All the item fields, including content and standard fields, are returned in the service response.
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.SitecoreItemScope">
+            <summary>
+            Sitecore Web Item API Item Scope
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreItemScope.Self">
+            <summary>
+            Scoped to the item
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreItemScope.Children">
+            <summary>
+            Scoped to the items children
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.SitecoreItemScope.Parent">
+            <summary>
+            Scoped to the items parent
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.ResponseFormat">
+            <summary>
+            Sitecore Web Item API response format
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.ResponseFormat.Json">
+            <summary>
+            Json response format
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.ResponseFormat.Xml">
+            <summary>
+            XML response format
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseResponse">
+            <summary>
+            Defines the properties and methods that objects wishing to represent a response from the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseResponse.Info">
+            <summary>
+            Gets the info.
+            </summary>
+            <value>
+            The info.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseResponse.StatusDescription">
+            <summary>
+            Gets the status description.
+            </summary>
+            <value>
+            The status description.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.IBaseResponse.StatusCode">
+            <summary>
+            Gets the status code.
+            </summary>
+            <value>
+            The status code.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCredentials">
+            <summary>
+            Defines the properties and methods that objects wishing to represent Sitecore Item Web API credentials must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCredentials.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCredentials.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreCredentials.EncryptHeaders">
+            <summary>
+            Gets or sets a value indicating whether [encrypt headers].
+            </summary>
+            <value>
+              <c>true</c> if [encrypt headers]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecorePublicKeyResponse">
+            <summary>
+            Defines the properties and methods that objects wishing to represent a Sitecore Item Web API public key must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecorePublicKeyResponse.Modulus">
+            <summary>
+            Gets the modulus.
+            </summary>
+            <value>
+            The modulus.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecorePublicKeyResponse.Exponent">
+            <summary>
+            Gets the exponent.
+            </summary>
+            <value>
+            The exponent.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponse">
+            <summary>
+            Defines the properties and methods that objects wishing to represent a response from the Sitecore Item Web API must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponse.Result">
+            <summary>
+            Gets the result.
+            </summary>
+            <value>
+            The result.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponse.Error">
+            <summary>
+            Gets the error.
+            </summary>
+            <value>
+            The error.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponseInfo">
+            <summary>
+            Defines the properties and methods that objects wishing to represent Sitecore Item Web API response info must implement
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponseInfo.ResponseTime">
+            <summary>
+            Gets the response time.
+            </summary>
+            <value>
+            The response time.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponseInfo.Length">
+            <summary>
+            Gets or sets the length.
+            </summary>
+            <value>
+            The length.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponseInfo.ErrorMessage">
+            <summary>
+            Gets or sets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponseInfo.StackTrace">
+            <summary>
+            Gets or sets the stack trace.
+            </summary>
+            <value>
+            The stack trace.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecoreWebResponseInfo.Uri">
+            <summary>
+            Gets the URI.
+            </summary>
+            <value>
+            The URI.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Net.FormUpload">
+            <summary>
+            Form Upload Class give the bytes representation
+            of Form Data
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Net.FileParameter">
+            <summary>
+            Object which wraps the Attached File
+            In HTTP Request
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse">
+            <summary>
+            Represents a public key response from the Sitecore Web Item API
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse.Info">
+            <summary>
+            Gets the info.
+            </summary>
+            <value>
+            The info.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse.StatusDescription">
+            <summary>
+            Gets the status description.
+            </summary>
+            <value>
+            The status description.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse.StatusCode">
+            <summary>
+            Gets the status code.
+            </summary>
+            <value>
+            The status code.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse.Modulus">
+            <summary>
+            Gets or sets the modulus.
+            </summary>
+            <value>
+            The modulus.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse.Exponent">
+            <summary>
+            Gets or sets the exponent.
+            </summary>
+            <value>
+            The exponent.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecorePublicKeyResponse.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponse">
+            <summary>
+            Represents a response from the Sitecore Web Item API
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponse.StatusDescription">
+            <summary>
+            Gets the status description.
+            </summary>
+            <value>
+            The status description.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponse.StatusCode">
+            <summary>
+            Gets the status code.
+            </summary>
+            <value>
+            The status code.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponse.Result">
+            <summary>
+            Gets or sets the result.
+            </summary>
+            <value>
+            The result.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponse.Error">
+            <summary>
+            Gets the error.
+            </summary>
+            <value>
+            The error.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponse.Info">
+            <summary>
+            Gets the info.
+            </summary>
+            <value>
+            The info.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponseInfo">
+            <summary>
+            Represents meta data about a response from the Sitecore Web Item API
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponseInfo.ResponseTime">
+            <summary>
+            Gets the response time.
+            </summary>
+            <value>
+            The response time.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponseInfo.Length">
+            <summary>
+            Gets or sets the length.
+            </summary>
+            <value>
+            The length.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponseInfo.ErrorMessage">
+            <summary>
+            Gets or sets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponseInfo.StackTrace">
+            <summary>
+            Gets or sets the stack trace.
+            </summary>
+            <value>
+            The stack trace.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Net.SitecoreWebResponseInfo.Uri">
+            <summary>
+            Gets the URI.
+            </summary>
+            <value>
+            The URI.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Security.SitecoreCredentials">
+            <summary>
+            Represents security credentials for a Sitecore Item Web API request
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Security.SitecoreCredentials.Validate">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Security.SitecoreCredentials.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Security.SitecoreCredentials.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Security.SitecoreCredentials.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Security.SitecoreCredentials.EncryptHeaders">
+            <summary>
+            Gets or sets a value indicating whether [encrypt headers].
+            </summary>
+            <value>
+              <c>true</c> if [encrypt headers]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Serialization.SerializeManager">
+            <summary>
+            Serialization Helper class which helps serialize Sitecore.Data.Items.Item
+            object into bytes, string.
+            It also helps to serialize LoadOptions class into string.
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Serialization.SerializeManager.SerializeItem(Sitecore.Data.Items.Item)">
+            <summary>
+            This function Serialize Sitecore.Data.Items.Item into byte array.
+            Though here string is been originated from the TextWriter wrapped in Stream class.
+            </summary>
+            <param name="itm">byte[]</param>
+            <returns>string representation of byte[] </returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Serialization.SerializeManager.SerializeIteminString(Sitecore.Data.Items.Item)">
+            <summary>
+            This function Serialize Sitecore.Data.Items.Item into string.
+            Though here string is been originated from the TextWriter class.
+            </summary>
+            <param name="itm">Sitecore.Data.Items.Item</param>
+            <returns>string representation of Sitecore.Data.Items.Item </returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Serialization.SerializeManager.BuildVersion(Sitecore.Data.Serialization.ObjectModel.SyncItem,Sitecore.Data.Items.Item)">
+            <summary>
+            Builds the version.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="version">The version.</param>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Serialization.SerializeManager.SerializeLoadOption(Mindtree.ItemWebApi.Pipelines.Advance.Serialize.Entities.LoadOptions)">
+            <summary>
+            This helps in Serialize the LoadOption object 
+            into string, though string is XML representation of object.
+            Here XML Serializer is used.
+            </summary>
+            <param name="loOptions">Custom.ItemWebApi.Pipelines.Advance.Serialize.Entities.LoadOptions Object</param>
+            <returns>XML based string representation of LoadOption object</returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Serialization.SerializeManager.SerializeObject(System.Object)">
+            <summary>
+            This Function Helps serialize any serializable object using Binary Formatter
+            </summary>
+            <param name="obj">System.Object</param>
+            <returns>Byte Array representation of object</returns>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Structs">
+            <summary>
+            Constants
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys">
+            <summary>
+            Querystring Keys
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.ItemId">
+            <summary>
+            The item id querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.items">
+            <summary>
+            The item id querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.ItemVersion">
+            <summary>
+            The item version querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Database">
+            <summary>
+            The database querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Language">
+            <summary>
+            The language querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Fields">
+            <summary>
+            The fields querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Payload">
+            <summary>
+            The payload querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Scope">
+            <summary>
+            The scope querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Query">
+            <summary>
+            The query querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Page">
+            <summary>
+            The page querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.PageSize">
+            <summary>
+            The page size querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.ExtractBlob">
+            <summary>
+            The extract BLOB querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Template">
+            <summary>
+            The template querystring key
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.QueryStringKeys.Name">
+            <summary>
+            The name querystring key
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Structs.AuthenticationHeaders">
+            <summary>
+            Authentication Headers
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.AuthenticationHeaders.UserName">
+            <summary>
+            The user name authentication header
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.AuthenticationHeaders.Password">
+            <summary>
+            The password authentication header
+            </summary>
+        </member>
+        <member name="F:Mindtree.Sitecore.WebApi.Client.Structs.AuthenticationHeaders.Encrypted">
+            <summary>
+            The encrypted authentication header
+            </summary>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Util.BoolExtensions">
+            <summary>
+            Extension methods for the bool type
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Util.BoolExtensions.ToIntString(System.Boolean)">
+            <summary>
+            To the int string.
+            </summary>
+            <param name="b">if set to <c>true</c> [b].</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Util.DictionaryExtensions">
+            <summary>
+            Extension methods for the Dictionary type
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Util.DictionaryExtensions.ToQueryString(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Converts a dictionary instance into a url encoded querystring
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Util.EnumExtensions">
+            <summary>
+            Enum extension methods
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Util.EnumExtensions.ToScopeParameter(Mindtree.Sitecore.WebApi.Client.SitecoreItemScope)">
+            <summary>
+            Converts the SitecoreItemScope instance to a valid querystring parameter value
+            </summary>
+            <param name="scope">The scope.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Util.EnumExtensions.ToHttpMethod(Mindtree.Sitecore.WebApi.Client.SitecoreQueryType)">
+            <summary>
+            To the HTTP method.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Util.SecurityUtil">
+            <summary>
+            Security focused utility methods
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Util.SecurityUtil.EncryptHeaderValue(System.String,Mindtree.Sitecore.WebApi.Client.Interfaces.ISitecorePublicKeyResponse)">
+            <summary>
+            Encrypts the header value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Util.StringExtensions">
+            <summary>
+            Extension methods for the string type
+            </summary>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Util.StringExtensions.IsSitecoreId(System.String)">
+            <summary>
+            Determines whether the passed string is a valid Sitecore id
+            </summary>
+            <param name="id">The id.</param>
+            <returns>
+              <c>true</c> if [is sitecore id] [the specified id]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Mindtree.Sitecore.WebApi.Client.Util.StringExtensions.EnsurePrefix(System.String,System.String)">
+            <summary>
+            Ensures the prefix.
+            </summary>
+            <param name="input">The input.</param>
+            <param name="prefix">The prefix.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mindtree.Sitecore.WebApi.Client.Util.SettingsUtility">
+            <summary>
+            Settings focused utility methods
+            </summary>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Util.SettingsUtility.DefaultApiVersion">
+            <summary>
+            Gets the default API version.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mindtree.Sitecore.WebApi.Client.Util.SettingsUtility.DefaultDatabase">
+            <summary>
+            Gets the default database.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
