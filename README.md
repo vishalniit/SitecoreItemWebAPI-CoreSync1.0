@@ -15,10 +15,12 @@ Can't I Simply have the Sitecore package which I can instal straight away ?
  Yes you can do so, please visit Sitecore marketplace and search for CoreSync, Under download you will find the zip based package which just had the service and config included. But remember if you directly install this on production server it will trigger the AppPool Refresh which may not be desired.
  
 What are these .dll files?
+
 Mindtree.Sitecore.ItemWebApi.Pipelines.dll : This library contains the enhanced code for extended Sitecore Item Web API.
 Mindtree.Sitecore.WebApi.Client.dll : This library contains the .net wrapper which allow you to call the JSON/XML based service from any .net based application.
 
 What is the role of this 'Mindtree.Sitecore.WebApiClient.Demo' ?
+
 This project is a console application which provide possible implementations of the service using the .net wrapper stated above.
 
 
