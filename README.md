@@ -3,12 +3,15 @@ I enhanced the Sitecore Item WebAPI 1.2 to include few new features because Item
 Now to overcome these challenges I decide to extend the Item Web API in such a manner so that it can do lot more than what it made for. I hope community like this extention.
 
 What is Pre-Requisite ?
+
  You need to installed Sitecore Item Web API 1.2 if you are using Sitecore version prior to 7.2. If you are using Sitecore 7.2 then Item Web API is part and parcel of Sitecore Package.
  
 How to Use from this GitHub?
+
  Download the whole project to your local and build it. Once successfully build you need to copy basically two .dll file "Mindtree.Sitecore.ItemWebApi.Pipelines.dll" and "Mindtree.Sitecore.WebApi.Client.dll" to your target Sitecore instance's Bin directory. You also need to replace the "`\App_Config\Include\Sitecore.ItemWebApi.config". Remember this file was based on Sitecore 7.2 and than extended further. So if in any future version if this file get modified than you need to manually patch the config file with newly inducted config sections.(Explained in blog).
 
 Can't I Simply have the Sitecore package which I can instal straight away ?
+
  Yes you can do so, please visit Sitecore marketplace and search for CoreSync, Under download you will find the zip based package which just had the service and config included. But remember if you directly install this on production server it will trigger the AppPool Refresh which may not be desired.
  
 What are these .dll files?
