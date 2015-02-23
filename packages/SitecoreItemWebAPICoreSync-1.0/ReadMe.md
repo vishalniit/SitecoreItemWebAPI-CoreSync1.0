@@ -1,3 +1,1 @@
-This is Sitecore package using which you can enhance the Existing Sitecore Item Web API 1.2. This package has a pre-requisite which is to install SitecoreItemWebApi 1.2.
-Remember SitecoreItemWebApi 1.2 is integral part off Sitecore Package starting from Sitecore 7.2, in other words than you don't need to install pre-requisiste mentioned above.
-This package is tested in 7.0, 7.1, 7.2 it should work in Sitecore 6.5 and 6.6 also though it is not gauranted.
+This is Sitecore package using which you can enhance the Existing Sitecore Item Web API 1.2. This package has a pre-requisite which is to install SitecoreItemWebApi 1.2. Remember SitecoreItemWebApi 1.2 is integral part off Sitecore Package starting from Sitecore 7.2, in other words than you don't need to install pre-requisite mentioned above. This package is tested in 7.0, 7.1, 7.2 it should work in Sitecore 6.5 and 6.6 also though it is not guaranteed.
