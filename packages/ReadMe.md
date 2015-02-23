@@ -1,0 +1,1 @@
+In this folder you may found third party packages/dll used in the project and you can also find the project output as Sitecore Packages.
