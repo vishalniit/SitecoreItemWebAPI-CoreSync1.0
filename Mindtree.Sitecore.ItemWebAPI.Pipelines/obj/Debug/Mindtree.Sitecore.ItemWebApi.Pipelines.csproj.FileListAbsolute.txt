@@ -2,9 +2,3 @@ D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\M
 D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\bin\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.pdb
 D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.dll
 D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.pdb
-D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.csprojResolveAssemblyReference.cache
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.ItemWebAPI.Pipelines\bin\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.dll
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.ItemWebAPI.Pipelines\bin\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.pdb
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.csprojResolveAssemblyReference.cache
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.dll
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.ItemWebAPI.Pipelines\obj\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.pdb

@@ -9,14 +9,3 @@ D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\M
 D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.WebApiClient\obj\Debug\Mindtree.Sitecore.WebApi.Client.csprojResolveAssemblyReference.cache
 D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.WebApiClient\obj\Debug\Mindtree.Sitecore.WebApi.Client.dll
 D:\Projects\ReviewWork\P and G_BRAND.COM PLATFORM\Development\Tools\AuditTools\Mindtree.Sitecore.WebApiClient\obj\Debug\Mindtree.Sitecore.WebApi.Client.pdb
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\obj\Debug\Mindtree.Sitecore.WebApi.Client.csprojResolveAssemblyReference.cache
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\obj\Debug\Mindtree.Sitecore.WebApi.Client.dll
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\obj\Debug\Mindtree.Sitecore.WebApi.Client.pdb
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Mindtree.Sitecore.WebApi.Client.dll.config
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Mindtree.Sitecore.WebApi.Client.xml
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Mindtree.Sitecore.WebApi.Client.dll
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Mindtree.Sitecore.WebApi.Client.pdb
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.dll
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Newtonsoft.Json.dll
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Mindtree.Sitecore.ItemWebApi.Pipelines.pdb
-D:\Projects\RnD\SitecoreItemWebAPI-CoreSync\Mindtree.Sitecore.WebApiClient\bin\Debug\Newtonsoft.Json.xml
