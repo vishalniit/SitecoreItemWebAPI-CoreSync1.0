@@ -8,7 +8,7 @@ What is Pre-Requisite ?
  
 How to Use from this GitHub?
 
- Download the whole project to your local and build it. Once successfully build you need to copy basically two .dll file "Mindtree.Sitecore.ItemWebApi.Pipelines.dll" and "Mindtree.Sitecore.WebApi.Client.dll" to your target Sitecore instance's Bin directory. You also need to replace the "`\App_Config\Include\Sitecore.ItemWebApi.config". Remember this file was based on Sitecore 7.2 and than extended further. So if in any future version if this file get modified than you need to manually patch the config file with newly inducted config sections.(Explained in blog).
+ Download the whole project to your local and build it. Once successfully build you need to copy basically two .dll file "Mindtree.Sitecore.ItemWebApi.Pipelines.dll" and "Mindtree.Sitecore.WebApi.Client.dll" to your target Sitecore instance's Bin directory. There is new config file which also you need to copy to your include folder 'ZMindtree.ItemWebApi.config', this file patches the existing Sitecore.ItemWebApi.config file at runtime. Remember this file was based on Sitecore 7.2 and than extended further. (Explained in blog).
 
 Can't I Simply have the Sitecore package which I can instal straight away ?
 
