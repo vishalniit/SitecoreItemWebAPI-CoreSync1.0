@@ -10,7 +10,7 @@ By Default Sitecore nowdays comes with
 <pages validateRequest="false"/>
 but it is not effective until or unless we do following
 <httpRuntime requestValidationMode="2.0"/>
-or read this answer http://stackoverflow.com/questions/26555626/sitecore-7-2-item-web-api-unable-to-put-html-text/28810171#28810171
+or read this answer http://stackoverflow.com/questions/26555626/sitecore-7-2-item-web-api-unable-to-put-html-text
  
 What is specific pre-requisite for using this tool from powershell remoting ?
 Please make sure the machine where your powershell script is stored, you have latest Powershell extention module in action, for example it is required to have version 3.0 & above.
