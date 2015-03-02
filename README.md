@@ -2,10 +2,18 @@
 I enhanced the Sitecore Item WebAPI 1.2 to include few new features because Item Web API does not support create the versioned (Language or Numbered) item. The media item support is also not great with Item Web API. The biggest support I am looking was, what If, if I want to create an Item while retaining the Item ID on the new Sitecore System. Such can only happen through two ways in Sitecore one is Plain Serialization or it’s another popular derivative which is Sitecore packaging.
 Now to overcome these challenges I decide to extend the Item Web API in such a manner so that it can do lot more than what it made for. I hope community like this extention.
 
-What is Pre-Requisite ?
+What is Pre-Requisite?
 
  You need to installed Sitecore Item Web API 1.2 if you are using Sitecore version prior to 7.2. If you are using Sitecore 7.2 then Item Web API is part and parcel of Sitecore Package.
+ If your .net runtime version is 4.0 or above please make sure that you have done following setting in your web.config, without it your default Sitecore update, new version create and simple create feature will not work.
+By Default Sitecore nowdays comes with
+  <pages validateRequest="false">
+but it is not effective until or unless we do following
+  <httpRuntime requestValidationMode="2.0"/>
  
+What is specific pre-requisite for using this tool from powershell remoting ?
+Please make sure the machine where your powershell script is stored, you have latest Powershell extention module in action, for example it is required to have version 3.0 & above.
+
 How to Use from this GitHub?
 
  Download the whole project to your local and build it. Once successfully build you need to copy basically two .dll file "Mindtree.Sitecore.ItemWebApi.Pipelines.dll" and "Mindtree.Sitecore.WebApi.Client.dll" to your target Sitecore instance's Bin directory. There is new config file which also you need to copy to your include folder 'ZMindtree.ItemWebApi.config', this file patches the existing Sitecore.ItemWebApi.config file at runtime. Remember this file was based on Sitecore 7.2 and than extended further. (Explained in blog).
@@ -23,6 +31,8 @@ What is the role of this 'Mindtree.Sitecore.WebApiClient.Demo' ?
 
 This project is a console application which provide possible implementations of the service using the .net wrapper stated above.
 
+How to use this tool ?
+Please find videos listed on my blog or sitecore market place
 
 The Postfix in the title hint at new tool for which as of now I can't publish the code but tool itself will be available at Sitecore Marketplace. To read more about this tool and extended webservice please follow my blog http://insitecore.blogspot.com 
 Please also point out issues and suggestion in order to optmize this thread.
