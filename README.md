@@ -7,9 +7,9 @@ What is Pre-Requisite?
  You need to installed Sitecore Item Web API 1.2 if you are using Sitecore version prior to 7.2. If you are using Sitecore 7.2 then Item Web API is part and parcel of Sitecore Package.
  If your .net runtime version is 4.0 or above please make sure that you have done following setting in your web.config, without it your default Sitecore update, new version create and simple create feature will not work.
 By Default Sitecore nowdays comes with
-  <pages validateRequest="false">
+<pages validateRequest="false"/>
 but it is not effective until or unless we do following
-  <httpRuntime requestValidationMode="2.0"/>
+<httpRuntime requestValidationMode="2.0"/>
  
 What is specific pre-requisite for using this tool from powershell remoting ?
 Please make sure the machine where your powershell script is stored, you have latest Powershell extention module in action, for example it is required to have version 3.0 & above.
