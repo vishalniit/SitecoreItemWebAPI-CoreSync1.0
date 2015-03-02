@@ -35,5 +35,5 @@ This project is a console application which provide possible implementations of 
 How to use this tool ?
 Please find videos listed on my blog or sitecore market place
 
-The Postfix in the title hint at new tool for which as of now I can't publish the code but tool itself will be available at Sitecore Marketplace. To read more about this tool and extended webservice please follow my blog http://insitecore.blogspot.com 
+To read more about this tool and extended webservice please follow my blog http://insitecore.blogspot.com 
 Please also point out issues and suggestion in order to optmize this thread.
