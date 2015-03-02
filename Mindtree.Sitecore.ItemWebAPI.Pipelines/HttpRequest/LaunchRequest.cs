@@ -84,4 +84,90 @@ namespace Mindtree.ItemWebApi.Pipelines.HttpRequest
         //    return item;
         //}
     }
+
+    //public class CustomRewriteUrl : Sitecore.Pipelines.PreprocessRequest.PreprocessRequestProcessor
+    //{
+    //    public override void Process(Sitecore.Pipelines.PreprocessRequest.PreprocessRequestArgs arguments)
+    //    {
+    //        Assert.ArgumentNotNull(arguments, "arguments");
+    //        try
+    //        {
+    //            string localPath = arguments.Context.Request.Url.LocalPath;
+    //            if (localPath.StartsWith("/-/item/"))
+    //            {
+    //                Context current = new Context
+    //                {
+    //                    Serializer = new JsonSerializer(),
+    //                    Version = CustomRewriteUrl.GetVersion(localPath)
+    //                };
+    //                Context.Current = current;
+    //                CustomRewriteUrl.Rewrite(arguments.Context);
+    //            }
+    //        }
+    //        catch (Exception exception)
+    //        {
+    //            Logger.Error(exception);
+    //        }
+    //    }
+    //    private static int GetVersion(string path)
+    //    {
+    //        Assert.ArgumentNotNull(path, "path");
+    //        string text = path.TrimStart(new char[]
+    //        {
+    //            '/'
+    //        }).Split(new char[]
+    //        {
+    //            '/'
+    //        })[2];
+    //        Assert.IsTrue(text.StartsWith("v"), "Version token is wrong.");
+    //        string s = text.Replace("v", string.Empty);
+    //        int result;
+    //        bool condition = int.TryParse(s, out result);
+    //        Assert.IsTrue(condition, "Version not recognized.");
+    //        return result;
+    //    }
+    //    private static void Rewrite(HttpContext context)
+    //    {
+    //        Assert.ArgumentNotNull(context, "context");
+    //        Uri url = context.Request.Url;
+    //        string text = url.LocalPath.TrimStart(new char[]
+    //        {
+    //            '/'
+    //        });
+    //        string[] array = text.Split(new char[]
+    //        {
+    //            '/'
+    //        });
+    //        int num = array.Length - 3;
+    //        string[] array2 = new string[num];
+    //        Array.Copy(array, 3, array2, 0, num);
+    //        string path = string.Format("/{0}", string.Join("/", array2));
+    //        string query = url.Query.TrimStart(new char[]
+    //        {
+    //            '?'
+    //        });
+    //        Sitecore.Text.UrlString urlString = new Sitecore.Text.UrlString
+    //        {
+    //            Path = path,
+    //            Query = query
+    //        };
+    //        WebUtil.RewriteUrl(urlString.ToString());
+    //    }
+    //}
+
+    //internal class JsonSerializer : ISerializer
+    //{
+    //    public string SerializedDataMediaType
+    //    {
+    //        get
+    //        {
+    //            return "application/json";
+    //        }
+    //    }
+    //    public string Serialize(object value)
+    //    {
+    //        Assert.ArgumentNotNull(value, "value");
+    //        return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(value);
+    //    }
+    //}
 }

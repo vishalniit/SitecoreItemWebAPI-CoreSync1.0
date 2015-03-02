@@ -46,7 +46,7 @@
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\packages\Sitecore-7.2\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\Libraries\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

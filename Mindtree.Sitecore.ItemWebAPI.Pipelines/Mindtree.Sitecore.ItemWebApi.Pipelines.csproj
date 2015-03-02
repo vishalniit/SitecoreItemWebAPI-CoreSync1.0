@@ -36,12 +36,12 @@
   <ItemGroup>
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore-7.2\Sitecore.ItemWebApi.dll</HintPath>
+      <HintPath>..\Libraries\Sitecore.ItemWebApi.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore-7.2\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\Libraries\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

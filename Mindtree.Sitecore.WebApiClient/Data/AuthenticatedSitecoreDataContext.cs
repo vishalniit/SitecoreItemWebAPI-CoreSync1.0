@@ -165,6 +165,34 @@ namespace Mindtree.Sitecore.WebApi.Client.Data
             return request;
         }
 
+        private Dictionary<string, object> FillMedia(IBaseQuery query)
+        {
+            Dictionary<string, object> postParameters = null;
+            if (query != null)
+            {
+                FileStream fs; byte[] filedata = null;
+                if (query.QueryType == SitecoreQueryType.AdvanceCreate)
+                {
+                    fs = ((ISitecoreAdvanceQuery)query).MediaItemStream;
+                }
+                else
+                {
+                    fs = ((ISitecoreCreateQuery)query).MediaItemStream;
+                }
+                if (fs != null)
+                {
+                    filedata = new byte[fs.Length];
+                    fs.Read(filedata, 0, filedata.Length);
+                    fs.Close();
+                    if (filedata != null)
+                    {
+                        postParameters = new Dictionary<string, object>();
+                        postParameters.Add(Mindtree.ItemWebApi.Pipelines.Configuration.Settings.file, new FileParameter(filedata, fs.Name, ""));
+                    }
+                }
+            }
+            return postParameters;
+        }
         /// <summary>
         /// Gets the response.
         /// </summary>
@@ -184,34 +212,21 @@ namespace Mindtree.Sitecore.WebApi.Client.Data
             contentType = string.Empty;
             string formDataBoundary = string.Empty;
             Dictionary<string, object> postParameters = null;
-            byte[] filedata = null, formData = null;
-            FileStream fs;
+            byte[] formData = null;
             formDataBoundary = String.Format("----------{0:N}", Guid.NewGuid());
             contentType = Mindtree.ItemWebApi.Pipelines.Configuration.Settings.ContentTypeMultipleFormData + " boundary=" + formDataBoundary;
             try
             {
                 switch (query.QueryType)
                 {
-                    case SitecoreQueryType.AdvanceCreate:                        
+                    case SitecoreQueryType.AdvanceCreate:
                         string loadOptions = ((ISitecoreAdvanceQuery)query).loadOptions;
                         string syncItem = ((ISitecoreAdvanceQuery)query).syncItem;
                         string encryptionKey = ((ISitecoreAdvanceQuery)query).EncryptionKey;
                         // Generate post objects
-                        postParameters = new Dictionary<string, object>();
-                        if (((ISitecoreAdvanceQuery)query).MediaItemStream != null)
-                        {
-                            fs = ((ISitecoreAdvanceQuery)query).MediaItemStream;
-                            if (fs != null)
-                            {
-                                filedata = new byte[fs.Length];
-                                fs.Read(filedata, 0, filedata.Length);
-                                fs.Close();
-                                if (filedata != null)
-                                {
-                                    postParameters.Add(Mindtree.ItemWebApi.Pipelines.Configuration.Settings.file, new FileParameter(filedata, fs.Name, ""));
-                                }
-                            }
-                        }
+                        postParameters = FillMedia(query);
+                        if (postParameters == null)
+                            postParameters = new Dictionary<string, object>();
                         postParameters.Add(Mindtree.ItemWebApi.Pipelines.Configuration.Settings.loadOptions, loadOptions);
                         postParameters.Add(Mindtree.ItemWebApi.Pipelines.Configuration.Settings.syncItem, syncItem);
                         postParameters.Add(Mindtree.ItemWebApi.Pipelines.Configuration.Settings.enKey, encryptionKey);
@@ -221,21 +236,9 @@ namespace Mindtree.Sitecore.WebApi.Client.Data
                     case SitecoreQueryType.Create:
                     case SitecoreQueryType.Update:
                     case SitecoreQueryType.CreateVersion:
-                        postParameters = new Dictionary<string, object>();
-                        if (((ISitecoreCreateQuery)query).MediaItemStream != null)
-                        {
-                            fs = ((ISitecoreCreateQuery)query).MediaItemStream;
-                            if (fs != null)
-                            {
-                                filedata = new byte[fs.Length];
-                                fs.Read(filedata, 0, filedata.Length);
-                                fs.Close();
-                                if (filedata != null)
-                                {
-                                    postParameters.Add(Mindtree.ItemWebApi.Pipelines.Configuration.Settings.file, new FileParameter(filedata, fs.Name, ""));
-                                }
-                            }
-                        }
+                        postParameters = FillMedia(query);
+                        if (postParameters == null)
+                            postParameters = new Dictionary<string, object>();
                         foreach (var item in ((ISitecoreQuery)query).FieldsToUpdate)
                         {
                             postParameters.Add(item.Key, item.Value);
@@ -255,7 +258,7 @@ namespace Mindtree.Sitecore.WebApi.Client.Data
             }
             catch (Exception ex)
             { Log.WriteError(ex.Message, ex); }
-            finally { filedata = null; formData = null; request = null; formDataBoundary = null; contentType = null; }
+            finally { formData = null; request = null; formDataBoundary = null; contentType = null; }
             // return the response
             return response;
         }
