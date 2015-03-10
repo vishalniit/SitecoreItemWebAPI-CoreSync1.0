@@ -1,19 +1,8 @@
 Hi Folks,
 
-------------If you copy this repository---------
+This is Sitecore Package, which allow you to install the CoreSync Module.
 
-In Order to build your project in visual studio, Please put the relevant Sitecore DLL into this folder in order to fix the broken reference.
-1. Sitecore.Client.dll
-2. Sitecore.ContentSearch.dll
-3. Sitecore.ItemWebApi.dll (1.2 Version)
-4. Sitecore.Kernel.dll
-5. Sitecore.Logging.dll
-------------End---------------------------------
-
-
-This folder contains also a Sitecore Package, which allow you to install the CoreSync Module.
-
-This package is applicable to Sitecore Version 7.1 and above Only.
+This package is applicable to Sitecore Version 7.0 and prior Only.
 
 For details on functionality of this tool please refer the online blog http://insitecore.blogspot.com or Git Repository https://github.com/vishalniit/SitecoreItemWebAPI-CoreSync1.0.
 
