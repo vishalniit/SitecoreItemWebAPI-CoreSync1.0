@@ -12,14 +12,14 @@ but it is not effective until or unless we do following
 <httpRuntime requestValidationMode="2.0"/>
 or read this answer http://stackoverflow.com/questions/26555626/sitecore-7-2-item-web-api-unable-to-put-html-text
  
-What is specific pre-requisite for using this tool from powershell remoting ?
-Please make sure the machine where your powershell script is stored, you have latest Powershell extention module in action, for example it is required to have version 3.0 & above.
+What is specific pre-requisite for using this tool from PowerShell remoting ?
+Please make sure the machine where your PowerShell script is stored, you have latest PowerShell extention module in action, for example it is required to have version 3.0 & above. In case you face issue while installing PowerShell version in Sitecore version 7.0 or 7.1 than first install 2.8 version than on top of it try to install PowerShell 3.0. It is important to have latest PowerShell version as in version 3.0 there are significant update to the remoting part which may be required if you want to automate the core sync backup using PowerShell.
 
 How to Use from this GitHub?
 
  Download the whole project to your local and build it. Once successfully build you need to copy basically two .dll file "Mindtree.Sitecore.ItemWebApi.Pipelines.dll" and "Mindtree.Sitecore.WebApi.Client.dll" to your target Sitecore instance's Bin directory. There is new config file which also you need to copy to your include folder 'ZMindtree.ItemWebApi.config', this file patches the existing Sitecore.ItemWebApi.config file at runtime. Remember this file was based on Sitecore 7.2 and than extended further. (Explained in blog).
 
-Can't I Simply have the Sitecore package which I can instal straight away ?
+Can't I Simply have the Sitecore package which I can install straight away ?
 
  Yes you can do so, please visit Sitecore marketplace and search for CoreSync, Under download you will find the zip based package which just had the service and config included. But remember if you directly install this on production server it will trigger the AppPool Refresh which may not be desired.
  
